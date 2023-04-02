@@ -27,7 +27,7 @@ public class Fight {
             System.out.println("Ravenclaw never miss ! "); //ravenclaw are more accurate
         }
         if(succesChance <8){ //If not ravenclaw, 60% of succes
-            if(obj.getName() == "pierre"){
+            if(obj.getName() == "stones"){
                 player.setDamage(obj.getDmg());
                 System.out.println("You dealt " + player.getDamage() + " damage to " + enemy.getName() + "!");
             }
@@ -40,8 +40,8 @@ public class Fight {
         }
     }
 
-    public static Lvl1 pierre = new Lvl1("pierre",10, 25);
-    public static Lvl1 rock = new Lvl1("cailloux",50, 12);
+    public static Lvl1 scales = new Lvl1("scales",5, 35);
+    public static Lvl1 stones = new Lvl1("stones",30, 15);
     public boolean startLevel1() {
 
         Scanner scanner = new Scanner(System.in);
@@ -59,16 +59,16 @@ public class Fight {
             switch (choice) {
                 case 1:
                     System.out.println("Choose on obect for your spell : ");
-                    System.out.println("choice 1 is : " + " " + pierre.toString());
-                    System.out.println("choice 2 is : " + " " + rock.toString());
+                    System.out.println("choice 1 is : " + " " + stones.toString());
+                    System.out.println("choice 2 is : " + " " + scales.toString());
                     int choiceObjToGet = scanner.nextInt();
                     System.out.println("Choose on obect for your spell : ");
                     if (choiceObjToGet == 1) {
-                        this.attackLvl1(enemy, wizard, pierre);
-                        this.removeOne(pierre);
+                        this.attackLvl1(enemy, wizard, stones);
+                        this.removeOne(stones);
                     } else if (choiceObjToGet == 2) {
-                        this.attackLvl1(enemy, wizard, rock);
-                        this.removeOne(rock);
+                        this.attackLvl1(enemy, wizard, scales);
+                        this.removeOne(scales);
                     }
 
                     break;

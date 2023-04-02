@@ -80,6 +80,7 @@ public class Main {
         System.out.println("Size Wand : " + wizard.getWand().getSize());
         System.out.println("Core Wand : " + wizard.getWand().getCore());
         System.out.println("Your Pet : " + wizard.getPet());
+        System.out.println("Good luck " + name);
 
         // Houses
         String houses = SortingHat.assignHouse(wizard);
