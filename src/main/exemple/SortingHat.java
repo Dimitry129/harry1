@@ -1,18 +1,19 @@
 package main.exemple;
 
-import java.util.List;
 import java.util.Random;
 
+
+
 public class SortingHat {
-    private List<House> houses;
+    private static String[] houses = {"Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"};
 
-    public SortingHat(List<House> houses) {
-        this.houses = houses;
-    }
-
-    public void assignHouse(Character character) {
+    public static String assignHouse(Wizard wizard){
         Random random = new Random();
-        int index = random.nextInt(houses.size());
-        character.setHouse(houses.get(index));
+        int index = random.nextInt(houses.length);
+        String house = houses[index];
+
+        wizard.setHouse(house);
+        return house;
     }
 }
+

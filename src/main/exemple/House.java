@@ -1,10 +1,10 @@
 package main.exemple;
 
 public enum House {
-    GRYFFINDOR("Griffondor"),
-    HUFFLEPUFF("Poufsouffle"),
-    RAVENCLAW("Serdaigle"),
-    SLYTHERIN("Serpentard");
+    GRYFFINDOR("Gryffindor"),
+    HUFFLEPUFF("Hufflepuff"),
+    RAVENCLAW("Ravenclaw"),
+    SLYTHERIN("Slytherin");
 
     private final String name;
 

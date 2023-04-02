@@ -1,4 +1,4 @@
-package main.exemple;
+/* package main.exemple;
 
 public abstract class ForbiddenSpell extends AbstractSpell {
     public ForbiddenSpell(String name, int powerLevel) {
@@ -11,3 +11,4 @@ public abstract class ForbiddenSpell extends AbstractSpell {
         System.out.println("You cast the forbidden spell " + getName() + " on " + target.getName() + " and they are now defeated!");
     }
 }
+*/

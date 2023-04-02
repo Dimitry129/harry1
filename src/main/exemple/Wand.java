@@ -1,16 +1,32 @@
 package main.exemple;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class Wand {
-    private String woodType;
-    private String coreType;
 
-    public Wand(String woodType, String coreType) {
-        this.woodType = woodType;
-        this.coreType = coreType;
+    private Core core;
+    private int size;
+
+    public Wand(Core core, int size){
+        this.core = core;
+        this.size = size;
     }
+
+    //GETTER SETTER
+    public Core getCore(){
+        return core;
+    }
+
+    public void setCore(Core core, int size) {
+        this.size = size;
+        this.core = core;
+
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
 }
