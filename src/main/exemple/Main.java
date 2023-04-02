@@ -2,51 +2,40 @@ package main.exemple;
 
 import java.util.Scanner;
 
-/* TODO: 02/04/2023 Unit test */
-/*
-Enemy : OK
-Fight :
-Main : OK
-ObjectLvl1 : OK
-Potion : OK
-SortingHat : OK
-Wand :
-Wizard :
- */
 
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Create a Wizard
+        // Wizard
         System.out.println("Enter wizard's name : ");
         String name = scanner.nextLine();
 
-        //Choose ur PET
-        System.out.println("Choose ur pet");
-        System.out.println("1. OWL");
-        System.out.println("2. RAT");
-        System.out.println("3. CAT");
-        System.out.println("4. TOAD");
+        //PET
+        System.out.println("Choose your pet ," + name);
+        System.out.println("1. Hedwig");
+        System.out.println("2. Fawkes");
+        System.out.println("3. Dog");
+        System.out.println("4. Cat");
         int choicePet = scanner.nextInt();
         Pet pet = null;
         switch (choicePet) {
             case 1:
-                pet = Pet.OWL;
+                pet = Pet.Hedwig;
                 break;
             case 2:
-                pet = Pet.RAT;
+                pet = Pet.Fawkes;
                 break;
             case 3:
-                pet = Pet.CAT;
+                pet = Pet.Dog;
                 break;
             case 4:
-                pet = Pet.TOAD;
+                pet = Pet.Cat;
                 break;
             default:
-                System.out.println("Invalid input, pet will be set to default OWL");
-                pet = pet.OWL;
+                System.out.println("Invalid input, pet will be set to default Hedwig");
+                pet = pet.Hedwig;
                 break;
         }
 
@@ -55,7 +44,7 @@ public class Main {
         System.out.println("Choose wand's core : ");
         System.out.println("1. PHOENIX FEATHER");
         System.out.println("2. DRAGON HEARTHSTRING");
-        System.out.println("3. UNICORN TAIL HAIR");
+        System.out.println("3. UNICORN HAIR");
         int choice = scanner.nextInt();
         Core core = null;
         switch (choice) {
@@ -66,7 +55,7 @@ public class Main {
                 core = Core.DRAGON_HEARTSTRING;
                 break;
             case 3:
-                core = Core.UNICORN_TAIL_HAIR;
+                core = Core.UNICORN_HAIR;
                 break;
         }
 
@@ -78,13 +67,13 @@ public class Main {
         SortingHat sortingHat = new SortingHat();
 
         int health = 100;
-        int damage = 25;
+        int damage = 15;
 
         Wand wand = new Wand(core, size);
         Wizard wizard = new Wizard(name, health, damage, wand, pet);
 
 
-        // Utiliser les méthodes et propriétés de l'objet Wizard créé
+
         System.out.println("Wizard Name : " + wizard.getName());
         System.out.println("Wizard Health : " + wizard.getHealth());
         System.out.println("Wizard Damage : " + wizard.getDamage());
@@ -92,11 +81,11 @@ public class Main {
         System.out.println("Core Wand : " + wizard.getWand().getCore());
         System.out.println("Your Pet : " + wizard.getPet());
 
-        // Assigner une maison au sorcier
+        // Houses
         String houses = SortingHat.assignHouse(wizard);
         System.out.println(wizard.getName() + "'s house is " + houses);
 
-        Enemy enemy = new Enemy("Troll", 60, 5);
+        Enemy enemy = new Enemy("Troll", 50, 10);
 
         Fight fight = new Fight(wizard, enemy);
         fight.startLevel1();

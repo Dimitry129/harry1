@@ -1,12 +1,12 @@
 package main.exemple;
 
-public class ObjectLvl1 {
+public class Lvl1 {
 
     private String name;
     private int nbObj ;
     private int dmg;
 
-    public ObjectLvl1(String name, int nbObj, int dmg ){
+    public Lvl1(String name, int nbObj, int dmg ){
         this.setName(name);
         this.setNbObj(nbObj);
         this.setDmg(dmg);

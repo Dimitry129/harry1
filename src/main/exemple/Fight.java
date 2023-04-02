@@ -16,10 +16,10 @@ public class Fight {
 
     }
 
-    public void removeOne(ObjectLvl1 obj){
+    public void removeOne(Lvl1 obj){
         obj.setNbObj(obj.getNbObj() -1);
     };
-    public void attackLvl1(Character enemy, Wizard player, ObjectLvl1 obj){
+    public void attackLvl1(Character enemy, Wizard player, Lvl1 obj){
         Random rand = new Random();
         int succesChance = rand.nextInt(10); //Random int between 0 .. 9
         if(player.getHouse()== "Ravenclaw"){
@@ -40,8 +40,8 @@ public class Fight {
         }
     }
 
-    public static ObjectLvl1 pierre = new ObjectLvl1("pierre",10, 25);
-    public static ObjectLvl1 rock = new ObjectLvl1("cailloux",50, 12);
+    public static Lvl1 pierre = new Lvl1("pierre",10, 25);
+    public static Lvl1 rock = new Lvl1("cailloux",50, 12);
     public boolean startLevel1() {
 
         Scanner scanner = new Scanner(System.in);

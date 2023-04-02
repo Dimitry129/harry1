@@ -10,6 +10,7 @@ public class Wand {
         this.size = size;
     }
 
+
     //GETTER SETTER
     public Core getCore(){
         return core;
