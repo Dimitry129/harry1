@@ -3,9 +3,6 @@ package main.exemple;
 import java.util.List;
 import java.util.Random;
 
-import com.example.game.models.Character;
-import com.example.game.models.House;
-
 public class SortingHat {
     private List<House> houses;
 
